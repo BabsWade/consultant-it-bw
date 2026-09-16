@@ -57,69 +57,70 @@ const filteredProjects = computed(() => {
     </div>
 
     <!-- Grille des Projets -->
-    <div class="grid grid-cols-1 lg:grid-cols-2 gap-10 max-w-7xl mx-auto">
-      <article 
-        v-for="(project, index) in filteredProjects" 
-        :key="index"
-        class="group flex flex-col bg-white border-2 border-brand-dark brutal-shadow transition-transform duration-200"
-      >
-        <!-- Encart Image du projet avec bordure basse rigide -->
-        <div class="relative w-full aspect-video overflow-hidden bg-brand-light border-b-2 border-brand-dark">
-          <img 
-            v-if="project.Image" 
-            :src="project.Image" 
-            :alt="project.title" 
-            class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-300"
-            loading="lazy"
-          />
-          <!-- Placeholder Brut si pas d'image -->
-          <div v-else class="w-full h-full flex items-center justify-center text-brand-dark bg-brand-light font-mono text-xs">
-            <div class="text-center p-4 border border-dashed border-brand-dark/40">
-              <FolderGit2 class="w-8 h-8 mx-auto mb-2 text-brand-dark" />
-              NO_PREVIEW_AVAILABLE.RAW
-            </div>
-          </div>
+<div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl mx-auto">
+  <article 
+    v-for="(project, index) in filteredProjects" 
+    :key="index"
+    class="group flex flex-col bg-white border-2 border-brand-dark brutal-shadow transition-transform duration-200"
+  >
 
-          <!-- Badge "Featured" rectiligne type étiquette d'alerte -->
-          <span 
-            v-if="project.featured" 
-            class="absolute top-4 left-4 bg-brand-accent text-brand-dark text-xs font-black uppercase tracking-wider px-3 py-1 border-2 border-brand-dark shadow-[2px_2px_0px_#000]"
-          >
-            CRITICAL_PROJECT
-          </span>
+    <!-- Image plus petite -->
+    <div class="relative w-full h-40 overflow-hidden bg-brand-light border-b-2 border-brand-dark">
+      <img 
+        v-if="project.Image" 
+        :src="project.Image" 
+        :alt="project.title" 
+        class="w-full h-full object-cover object-top filter grayscale group-hover:grayscale-0 transition-all duration-300"
+        loading="lazy"
+      />
+
+      <div v-else class="w-full h-full flex items-center justify-center text-brand-dark bg-brand-light font-mono text-xs">
+        <div class="text-center p-4 border border-dashed border-brand-dark/40">
+          <FolderGit2 class="w-8 h-8 mx-auto mb-2 text-brand-dark" />
+          NO_PREVIEW_AVAILABLE.RAW
         </div>
+      </div>
 
-        <!-- Contenu du projet -->
-        <div class="p-6 md:p-8 flex flex-col flex-1 bg-white">
-          <div class="flex justify-between items-start mb-4">
-            <div>
-              <span class="text-brand-teal font-mono text-xs font-black uppercase tracking-widest mb-1 block">
-                // {{ project.category }}
-              </span>
-              <h3 class="text-2xl font-black text-brand-dark uppercase tracking-tight group-hover:text-brand-teal transition-colors">
-                {{ project.title }}
-              </h3>
-            </div>
-          </div>
+      <span 
+        v-if="project.featured" 
+        class="absolute top-3 left-3 bg-brand-accent text-brand-dark text-xs font-black uppercase tracking-wider px-2 py-1 border-2 border-brand-dark shadow-[2px_2px_0px_#000]"
+      >
+        CRITICAL_PROJECT
+      </span>
+    </div>
 
-          <p class="text-brand-navy font-sans font-medium text-base leading-relaxed mb-6 flex-1">
-            {{ project.description }}
-          </p>
+    <!-- Contenu plus compact -->
+    <div class="p-4 md:p-5 flex flex-col flex-1 bg-white">
+      
+      <div class="flex justify-between items-start mb-3">
+        <div>
+          <span class="text-brand-teal font-mono text-xs font-black uppercase tracking-widest mb-1 block">
+            // {{ project.category }}
+          </span>
 
-          <!-- Stack technologique (Format étiquettes de composants de serveur) -->
-          <div class="flex flex-wrap gap-2 mb-8 pt-4 border-t border-brand-dark/10">
-            <span 
-              v-for="tech in project.technologies" 
-              :key="tech"
-              class="flex items-center gap-1.5 px-2.5 py-1 bg-brand-light text-brand-dark font-mono text-xs font-bold border border-brand-dark"
-            >
-              <Code2 class="w-3.5 h-3.5 text-brand-dark" />
-              {{ tech }}
-            </span>
-          </div>
+          <h3 class="text-xl font-black text-brand-dark uppercase tracking-tight group-hover:text-brand-teal transition-colors">
+            {{ project.title }}
+          </h3>
+        </div>
+      </div>
 
-          <!-- Liens d'action Brutalistes (Boutons carrés à ombres brutes) -->
-          <div class="flex flex-wrap items-center gap-4 pt-4 border-t-2 border-brand-dark mt-auto font-mono text-xs font-bold">
+      <p class="text-brand-navy font-sans font-medium text-sm leading-relaxed mb-4 flex-1">
+        {{ project.description }}
+      </p>
+
+      <!-- Technologies -->
+      <div class="flex flex-wrap gap-1.5 mb-5 pt-3 border-t border-brand-dark/10">
+        <span 
+          v-for="tech in project.technologies" 
+          :key="tech"
+          class="flex items-center gap-1 px-2 py-1 bg-brand-light text-brand-dark font-mono text-[11px] font-bold border border-brand-dark"
+        >
+          <Code2 class="w-3 h-3 text-brand-dark" />
+          {{ tech }}
+        </span>
+      </div>
+
+      <div class="flex flex-wrap items-center gap-4 pt-4 border-t-2 border-brand-dark mt-auto font-mono text-xs font-bold">
             <a 
               v-if="project.Demo && project.Demo !== '#'" 
               :href="project.Demo" 
@@ -139,9 +140,13 @@ const filteredProjects = computed(() => {
               GET_SOURCE
             </a>
           </div>
-        </div>
-      </article>
+
     </div>
+  </article>
+</div>
+
+
+  
 
     <!-- État vide technique (No Data Log) -->
     <div v-if="filteredProjects.length === 0" class="text-center py-20 border-2 border-brand-dark bg-white brutal-shadow max-w-xl mx-auto font-mono text-sm text-brand-dark">
