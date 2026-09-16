@@ -29,15 +29,14 @@ const filteredProjects = computed(() => {
     <!-- En-tête de section style Fiche d'Inventaire -->
     <div class="mb-12 border-2 border-brand-dark bg-white p-8 brutal-shadow max-w-3xl">
       <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-4">
-        SECTION_03 // REPERTOIRE_APPLICATIONS
+        +15 PROJETS
       </div>
       <h2 class="text-3xl md:text-5xl font-black text-brand-dark uppercase tracking-tighter mb-4">
         Mes Projets Récents
       </h2>
       <div class="w-16 h-2 bg-brand-dark mb-4"></div>
       <p class="text-brand-muted font-mono text-sm leading-relaxed">
-        Une sélection de mes réalisations, allant des portails institutionnels complexes aux applications web et plateformes mobiles. Registre d'intégrité logicielle.
-      </p>
+        Une sélection de mes réalisations académiques et personnelles      </p>
     </div>
 
     <!-- Système d'onglets (Filtres style Tableau de Commande Industriel) -->

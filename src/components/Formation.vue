@@ -18,7 +18,7 @@ import {
     <!-- En-tête de section style Dossier d'Accréditation -->
     <div class="mb-16 border-2 border-brand-dark bg-white p-8 brutal-shadow max-w-3xl">
       <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-4">
-        SECTION_05 // TITRES_&_ACCREDITATIONS
+        BAC + 5
       </div>
       <h2 class="text-3xl md:text-5xl font-black text-brand-dark uppercase tracking-tighter mb-4">
         Formation & Certifications

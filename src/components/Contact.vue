@@ -19,14 +19,14 @@ const personalInfo = {
     <!-- En-tête de section style Fiche d'Établissement de Liaison -->
     <div class="mb-16 border-2 border-brand-dark bg-white p-8 brutal-shadow max-w-3xl mx-auto lg:mx-0">
       <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-4">
-        SECTION_06 // PROTOCOLE_DE_COMMUNICATION
+        PRET A COLLABORER
       </div>
       <h2 class="text-3xl md:text-5xl font-black text-brand-dark uppercase tracking-tighter mb-4">
         Établir une Connexion
       </h2>
       <div class="w-16 h-2 bg-brand-dark mb-4"></div>
       <p class="text-brand-muted font-mono text-sm leading-relaxed">
-        Canaux officiels pour planifier une consultation CMS/LMS, soumettre un cahier des charges d'architecture web ou engager une collaboration technique.
+        Canaux officiels pour planifier une consultation, soumettre un cahier des charges d'architecture web ou engager une collaboration technique.
       </p>
     </div>
 

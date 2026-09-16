@@ -48,7 +48,7 @@ const personalInfo = {
       <!-- BLOC 3 : LE NOM ET TITRE (Section principale gauche) -->
       <div class="lg:col-span-8 border-r-0 lg:border-r-2 border-b-2 lg:border-b-0 border-brand-dark p-8 md:p-12 space-y-8 bg-white">
         <div class="space-y-4">
-          <span class="text-xs font-black uppercase tracking-widest bg-black text-white px-2 py-0.5">NOM DU CONSULTANT :</span>
+          <span class="text-xs font-black uppercase tracking-widest bg-black text-white px-2 py-0.5">JE SUIS :</span>
           <h1 class="text-4xl md:text-7xl font-black text-brand-dark tracking-tighter uppercase leading-none">
             {{ personalInfo.name }}
           </h1>

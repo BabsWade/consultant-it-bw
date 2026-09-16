@@ -44,7 +44,7 @@ const toolsConfig = {
     <!-- En-tête de section style Rapport d'Ingénierie -->
     <div class="mb-16 border-2 border-brand-dark bg-white p-8 brutal-shadow max-w-3xl">
       <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-4">
-        SECTION_04 // SPECIFICATIONS_TECHNIQUES
+        +5
       </div>
       <h2 class="text-3xl md:text-5xl font-black text-brand-dark uppercase tracking-tighter mb-4">
         Compétences & Stack

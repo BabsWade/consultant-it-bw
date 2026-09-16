@@ -10,14 +10,14 @@ import { Briefcase, Calendar, MapPin, Code2, FolderGit2, UserCheck, CheckCircle2
     <!-- En-tête de section style Fiche d'Inventaire -->
     <div class="mb-16 border-2 border-brand-dark bg-white p-8 brutal-shadow max-w-3xl">
       <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-4">
-        SECTION_02 // PARCOURS & IMPLICATION
+        + 4 ANS
       </div>
       <h2 class="text-3xl md:text-5xl font-black text-brand-dark uppercase tracking-tighter mb-4">
         Expériences Professionnelles
       </h2>
       <div class="w-16 h-2 bg-brand-dark mb-4"></div>
       <p class="text-brand-muted font-mono text-sm leading-relaxed">
-        Plus de 4 ans d'expérience au service d'institutions académiques, d'organisations panafricaines et de plateformes web à fort impact. Document de traçabilité technique.
+        Au service d'institutions académiques, d'organisations panafricaines et de plateformes web à fort impact.
       </p>
     </div>
 
@@ -44,7 +44,7 @@ import { Briefcase, Calendar, MapPin, Code2, FolderGit2, UserCheck, CheckCircle2
               </h3>
               <p class="text-brand-muted font-mono font-bold text-sm mt-1 flex items-center gap-2">
                 <Briefcase class="w-4 h-4 shrink-0 text-brand-dark" />
-                COMPANY // {{ exp.company }}
+                // INSTITUTION : {{ exp.company }}
               </p>
             </div>
             
@@ -77,7 +77,7 @@ import { Briefcase, Calendar, MapPin, Code2, FolderGit2, UserCheck, CheckCircle2
 
           <!-- Liste des missions (Puces carrées brutales) -->
           <div class="mb-6">
-            <h4 class="text-xs font-mono font-black uppercase tracking-widest text-brand-muted mb-3">// MISSIONS_LOG :</h4>
+            <h4 class="text-xs font-mono font-black uppercase tracking-widest text-brand-muted mb-3">// MISSIONS :</h4>
             <ul class="space-y-3 text-sm text-brand-dark font-mono">
               <li v-for="(mission, mIdx) in exp.missions" :key="mIdx" class="flex items-start gap-3 pl-1">
                 <!-- Encart de validation carré et brut -->
@@ -94,7 +94,7 @@ import { Briefcase, Calendar, MapPin, Code2, FolderGit2, UserCheck, CheckCircle2
             <!-- Badges des projets -->
             <div v-if="exp.projects && exp.projects.length" class="flex flex-wrap items-center gap-2">
               <span class="text-brand-muted font-black uppercase tracking-wider flex items-center gap-1">
-                <FolderGit2 class="w-3.5 h-3.5 text-brand-dark" /> PROJETS_LIES :
+                <FolderGit2 class="w-3.5 h-3.5 text-brand-dark" /> PROJETS :
               </span>
               <span 
                 v-for="proj in exp.projects" 

@@ -50,7 +50,7 @@ const activeTab = ref('#home');
       <!-- Témoin d'activité matériel -->
       <div class="bg-brand-light border border-brand-dark px-3 py-1.5 font-mono text-[10px] font-bold text-brand-teal flex items-center gap-2">
         <span class="w-2.5 h-2.5 bg-brand-teal inline-block animate-pulse"></span>
-        NAV_SYS: LINK_OK
+        DISPONIBLE
       </div>
     </div>
 
@@ -76,10 +76,8 @@ const activeTab = ref('#home');
 
     <!-- Pied de carte / Signature Matrice -->
     <div class="pt-6 border-t-2 border-brand-dark font-mono text-[10px] text-brand-muted space-y-2">
-      <div>SYS_VERSION // v4.0.0</div>
-      <div class="bg-black text-white px-2 py-1 text-center font-bold tracking-widest text-[9px]">
-        CORE_ACTIVE
-      </div>
+      <div>VERSION 15/09/2026</div>
+      
     </div>
   </aside>
 </template>
