@@ -2,18 +2,18 @@
 // Tes données personnelles exactes conservées
 const personalInfo = {
   name: "Babacar WADE",
-  title: "Concepteur & Développeur Web/Mobile | Consultant CMS & LMS",
+  title: "Concepteur et Développeur d'Applications Web & Mobile, Full Stack",
   location: "Thiès, Sénégal",
   email: "wadebabacar52@gmail.com",
   phone: "(+221) 77 868 79 66",
   website: "https://babacarwade.online",
   github: "https://github.com",
   linkedin: "https://linkedin.com",
-  bio: "Passionné par l'ingénierie logicielle et la transformation digitale, j'accompagne les institutions, universités et entreprises dans la conception d'architectures web robustes, l'intégration de systèmes complexes (CMS/LMS) et la gestion de plateformes à fort impact.",
+  bio: "J’accompagne les organisations dans la conception, le développement et l’évolution de leurs solutions numériques, de l’analyse des besoins à la mise en production. Mon expérience des projets institutionnels nationaux et panafricains me permet de combiner expertise technique, compréhension des enjeux métier et capacité d’adaptation.",
   stats: [
     { label: "Expérience", value: "04 ans" },
-    { label: "Systèmes LMS/CMS", value: "10 plf" },
-    { label: "Niveau", value: "Master" }
+    { label: "Projets", value: "+10" },
+    { label: "Niveau", value: "Master 2" }
   ]
 }
 </script>
@@ -30,10 +30,10 @@ const personalInfo = {
       <!-- BLOC 1 : INDEX & LOCALISATION (Bandeau supérieur gauche) -->
       <div class="lg:col-span-8 border-b-2 border-r-0 lg:border-r-2 border-brand-dark p-6 bg-brand-accent flex flex-col md:flex-row justify-between items-start md:items-center gap-4">
         <div class="font-mono text-xs font-bold tracking-widest text-brand-dark uppercase">
-          [ ARCHITECTURE_REPORT // REF: INGENIERO-2026 ]
+          Bienvenue et bonne visite !
         </div>
         <div class="bg-black text-white px-4 py-1 font-mono text-xs font-bold uppercase tracking-wider">
-          LOC: {{ personalInfo.location }} // NODE_ACTIVE
+          LOC: {{ personalInfo.location }}
         </div>
       </div>
 
@@ -41,7 +41,7 @@ const personalInfo = {
       <div class="lg:col-span-4 border-b-2 border-brand-dark p-6 bg-white flex items-center">
         <div class="flex items-center gap-3 font-mono text-xs font-bold text-brand-teal">
           <span class="w-3 h-3 bg-brand-teal inline-block animate-pulse"></span>
-          SYSTEM STATUS: STABLE & DEPLOYED
+          DISPONIBLE
         </div>
       </div>
 
@@ -60,7 +60,7 @@ const personalInfo = {
 
         <!-- BLOC INCLUS : FICHE TECHNIQUE / BIO -->
         <div class="border-2 border-brand-dark p-6 bg-brand-light brutal-shadow-sm font-mono text-sm text-brand-dark space-y-4">
-          <div class="font-bold text-xs uppercase tracking-wider text-brand-muted border-b border-brand-dark/20 pb-2">// DOSSIER_BIO.TXT</div>
+          <div class="font-bold text-xs uppercase tracking-wider text-brand-muted border-b border-brand-dark/20 pb-2">A propos</div>
           <p class="leading-relaxed font-sans font-medium text-base">
             {{ personalInfo.bio }}
           </p>
@@ -74,7 +74,7 @@ const personalInfo = {
           </a>
           <a :href="personalInfo.website" 
              class="px-8 py-4 bg-white text-brand-dark font-bold text-center font-mono uppercase tracking-wider border-2 border-black transition-all brutal-shadow-btn">
-            [ PARCOURIR_PROJETS ]
+            [ TELECHARGER CV ]
           </a>
         </div>
       </div>
@@ -85,7 +85,7 @@ const personalInfo = {
         <!-- Les stats découpées en compartiments étanches -->
         <div class="divide-y-2 divide-brand-dark border-b-2 lg:border-b-0 border-brand-dark">
           <div v-for="(stat, i) in personalInfo.stats" :key="i" class="p-8 bg-white space-y-2">
-            <div class="text-xs font-mono uppercase tracking-wider text-brand-muted">// METRIC_0{{i+1}}</div>
+            <div class="text-xs font-mono uppercase tracking-wider text-brand-muted">{{i+1}}</div>
             <div class="text-4xl font-black text-brand-dark font-mono leading-none tracking-tight">{{ stat.value }}</div>
             <div class="text-xs font-mono font-bold uppercase tracking-widest text-brand-teal">{{ stat.label }}</div>
           </div>
@@ -93,16 +93,9 @@ const personalInfo = {
 
         <!-- Pied de carte réseau / Faux code-barres -->
         <div class="p-6 bg-white border-t-2 border-brand-dark flex flex-col gap-2 font-mono text-[10px] text-brand-muted">
-          <div>DATA_INTEGRITY_VERIFIED_BY_WADE</div>
+          <div>VERSION: 15/09/2026</div>
           <!-- Faux code-barres CSS -->
-          <div class="flex h-8 bg-brand-dark w-full opacity-80">
-            <div class="w-1 bg-white h-full mr-1"></div>
-            <div class="w-3 bg-white h-full mr-2"></div>
-            <div class="w-1 bg-white h-full mr-0.5"></div>
-            <div class="w-2 bg-white h-full mr-3"></div>
-            <div class="w-4 bg-white h-full mr-1"></div>
-            <div class="w-1 bg-white h-full mr-1"></div>
-          </div>
+          
         </div>
 
       </div>
