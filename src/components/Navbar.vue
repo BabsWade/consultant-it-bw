@@ -16,7 +16,7 @@ const activeTab = ref('#home');
 
 <template>
   <!-- NAVIGATION MOBILE : Barre flottante style Pilule One UI en bas d'écran -->
-  <nav class="md:hidden fixed bottom-4 left-4 right-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-full shadow-lg shadow-slate-900/5 z-50 p-1.5">
+  <nav class="md:hidden fixed dark:bg-[#000000] bottom-4 left-4 right-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-full shadow-lg shadow-slate-900/5 z-50 p-1.5">
     <ul class="flex justify-around items-center">
       <li v-for="item in navItems" :key="item.name" class="relative">
         <a 

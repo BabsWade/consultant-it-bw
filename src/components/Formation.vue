@@ -13,7 +13,7 @@ import {
 
 <template>
   <!-- Arrière-plan doux et épuré typique de One UI -->
-  <section id="formation" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
+  <section id="formation" class="py-24 dark:bg-[#000000] relative font-sans transition-colors duration-300">
     
     <!-- En-tête de section style One UI (Grand titre, alignement clair) -->
     <div class="max-w-6xl mx-auto px-6 mb-12">

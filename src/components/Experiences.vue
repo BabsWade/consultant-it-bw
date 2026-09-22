@@ -18,7 +18,7 @@ import {
 <template>
   <section
     id="experiences"
-    class="relative overflow-hidden py-16 md:py-24 dark:bg-[#000000]"
+    class="relative overflow-hidden dark:bg-[#000000] py-16 md:py-24"
   >
   
     <div

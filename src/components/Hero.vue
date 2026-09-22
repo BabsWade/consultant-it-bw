@@ -4,7 +4,7 @@ import { personalInfo } from '../data/portfolioData.js';
 </script>
 
 <template>
-  <section class="min-h-screen bg-[#F3F4F8] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
+  <section class="min-h-screen text-slate-800 dark:bg-[#000000] font-sans py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
     <div class="max-w-6xl w-full space-y-5">
       
       <!-- Carte Principale (Style One UI Squircle Card) -->
