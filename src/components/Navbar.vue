@@ -24,7 +24,7 @@ const activeTab = ref('#home');
           @click="activeTab = item.href"
           class="flex flex-col items-center justify-center p-2.5 rounded-full text-xs transition-all duration-200 active:scale-90"
           :class="activeTab === item.href 
-            ? 'bg-blue-600 text-white shadow-sm' 
+            ? 'bg-blue-600 text-white  ' 
             : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100/70'"
         >
           <component :is="item.icon" class="w-5 h-5" />
@@ -35,12 +35,12 @@ const activeTab = ref('#home');
   </nav>
 
   <!-- NAVIGATION DESKTOP : Panneau latéral flottant (Card Squircle One UI) -->
-  <aside class="hidden md:flex flex-col fixed left-6 top-6 bottom-6 w-64 bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[32px] z-50 p-6 justify-between shadow-sm">
+  <aside class="hidden md:flex flex-col fixed left-6 top-6 bottom-6 w-64 bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[32px] z-50 p-6 justify-between  ">
     
     <!-- En-tête : Badge utilisateur & Statut -->
     <div class="space-y-4">
       <div class="flex items-center gap-3 p-3 bg-slate-100/80 rounded-2xl border border-slate-200/60">
-        <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-extrabold flex items-center justify-center text-sm shadow-sm shrink-0">
+        <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-extrabold flex items-center justify-center text-sm   shrink-0">
           BW
         </div>
         <div class="min-w-0">
@@ -72,7 +72,7 @@ const activeTab = ref('#home');
             @click="activeTab = item.href"
             class="flex items-center gap-3.5 px-4 py-3 rounded-full transition-all duration-200 active:scale-[0.97]"
             :class="activeTab === item.href 
-              ? 'bg-blue-600 text-white font-semibold shadow-sm' 
+              ? 'bg-blue-600 text-white font-semibold  ' 
               : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'"
           >
             <component 

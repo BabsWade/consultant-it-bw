@@ -5,10 +5,10 @@ import { personalInfo } from '../data/portfolioData.js';
 
 <template>
   <section class="min-h-screen bg-[#F3F4F8] text-slate-800 font-sans py-12 px-4 sm:px-6 lg:px-8 flex items-center justify-center">
-    <div class="max-w-5xl w-full space-y-5">
+    <div class="max-w-6xl w-full space-y-5">
       
       <!-- Carte Principale (Style One UI Squircle Card) -->
-      <div class="bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[32px] p-8 sm:p-10 shadow-sm transition-all duration-300 hover:shadow-md">
+      <div class="bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[32px] p-8 sm:p-10   transition-all duration-300 hover:shadow-md">
         
         <!-- En-tête : Localisation & Badge statut -->
         <div class="flex flex-wrap items-center justify-between gap-3 mb-8">
@@ -54,7 +54,7 @@ import { personalInfo } from '../data/portfolioData.js';
           <!-- Email / Contact principal -->
           <a 
             :href="`mailto:${personalInfo.email}`"
-            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 active:scale-[0.97] text-white font-medium text-sm transition-all shadow-sm gap-2"
+            class="inline-flex items-center justify-center px-6 py-3 rounded-full bg-blue-600 hover:bg-blue-700 active:scale-[0.97] text-white font-medium text-sm transition-all   gap-2"
           >
             <svg class="w-4 h-4" fill="none" stroke="currentColor" viewBox="0 0 24 24">
               <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M3 8l7.89 5.26a2 2 0 002.22 0L21 8M5 19h14a2 2 0 002-2V7a2 2 0 002-2H5a2 2 0 00-2 2v10a2 2 0 002 2z"/>
@@ -105,7 +105,7 @@ import { personalInfo } from '../data/portfolioData.js';
         <div 
           v-for="(stat, index) in personalInfo.stats" 
           :key="index"
-          class="bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[28px] p-6 shadow-sm hover:shadow-md transition-all duration-200 group"
+          class="bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[28px] p-6   hover:shadow-md transition-all duration-200 group"
         >
           <span class="text-3xl sm:text-4xl font-extrabold text-slate-900 block tracking-tight group-hover:text-blue-600 transition-colors">
             {{ stat.value }}

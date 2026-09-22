@@ -24,10 +24,10 @@ const personalInfo = {
 
 <template>
   <!-- Fond doux et épuré typique de One UI -->
-  <section id="formation" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
+  <section id="contact" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
     
     <!-- En-tête de section style One UI -->
-    <div class="max-w-7xl mx-auto px-6 mb-12">
+    <div class="max-w-6xl mx-auto px-6 mb-12">
       <div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
         <MessageSquare class="w-4 h-4" />
         <span>Prêt à collaborer</span>
@@ -41,7 +41,7 @@ const personalInfo = {
     </div>
 
     <!-- Grille des cartes de contact -->
-    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
+    <div class="max-w-6xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
       
       <!-- BLOC GAUCHE : CANAUX DIRECTS DE CONTACT (7 colonnes) -->
       <div class="lg:col-span-7 space-y-4 md:space-y-6">
@@ -182,7 +182,7 @@ const personalInfo = {
     </div>
 
     <!-- Zone de Pied de Page / Signature -->
-    <div class="mt-20 max-w-7xl mx-auto px-6 pt-8 border-t border-gray-200/60 dark:border-gray-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-400 dark:text-gray-500">
+    <div class="mt-20 max-w-6xl mx-auto px-6 pt-8 border-t border-gray-200/60 dark:border-gray-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-400 dark:text-gray-500">
       <div>Conçu pour une fiabilité maximale</div>
       <div class="px-4 py-1.5 bg-gray-100 dark:bg-[#1C1C1E] text-gray-700 dark:text-gray-300 rounded-full font-semibold">
         © {{ personalInfo.name }} • Tous droits réservés

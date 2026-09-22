@@ -16,7 +16,7 @@ import {
   <section id="formation" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
     
     <!-- En-tête de section style One UI (Grand titre, alignement clair) -->
-    <div class="max-w-7xl mx-auto px-6 mb-12">
+    <div class="max-w-6xl mx-auto px-6 mb-12">
       <div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
         <GraduationCap class="w-4 h-4" />
         <span>BAC + 5</span>
@@ -29,7 +29,7 @@ import {
       </p>
     </div>
 
-    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-7xl mx-auto px-6">
+    <div class="grid grid-cols-1 lg:grid-cols-3 gap-6 md:gap-8 max-w-6xl mx-auto px-6">
       
       <!-- Colonne Principale : Diplômes Universitaires (2/3) -->
       <div class="lg:col-span-2 space-y-6 md:space-y-8">

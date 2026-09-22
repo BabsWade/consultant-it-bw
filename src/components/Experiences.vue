@@ -18,13 +18,9 @@ import {
 <template>
   <section
     id="experiences"
-    class="relative overflow-hidden bg-[#f5f7fa] py-16 md:py-24"
+    class="relative overflow-hidden py-16 md:py-24 dark:bg-[#000000]"
   >
-    <!-- Décoration One UI -->
-    <div
-      class="pointer-events-none absolute -right-32 -top-32 h-80 w-80 rounded-full bg-[#dbeafe] opacity-70 blur-3xl"
-    ></div>
-
+  
     <div
       class="pointer-events-none absolute -left-40 bottom-20 h-96 w-96 rounded-full bg-[#e0e7ff] opacity-50 blur-3xl"
     ></div>
@@ -32,7 +28,7 @@ import {
     <div class="relative mx-auto max-w-6xl px-5 md:px-8">
 
       <!-- HEADER -->
-      <div class="mb-12 md:mb-16 max-w-3xl">
+      <div class="mb-12 md:mb-16 max-w-6xl">
 
         <div
           class="mb-5 inline-flex items-center rounded-full bg-[#e8f1ff] px-4 py-2 text-sm font-semibold text-[#1677ff]"
@@ -210,7 +206,7 @@ import {
                   <span
                     v-for="proj in exp.projects"
                     :key="proj"
-                    class="rounded-full bg-white px-3 py-1.5 text-xs font-medium text-[#374151] shadow-sm"
+                    class="rounded-full bg-white px-3 py-1.5 text-xs font-medium text-[#374151]  "
                   >
                     {{ proj }}
                   </span>
@@ -220,7 +216,7 @@ import {
                 <!-- REFERENCE -->
                 <div
                   v-if="exp.reference"
-                  class="flex items-center gap-2 rounded-full bg-white px-3.5 py-2 shadow-sm sm:ml-auto"
+                  class="flex items-center gap-2 rounded-full bg-white px-3.5 py-2   sm:ml-auto"
                 >
                   <span
                     class="flex h-7 w-7 items-center justify-center rounded-full bg-[#eaf2ff] text-[#1677ff]"

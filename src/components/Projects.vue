@@ -24,7 +24,7 @@ const filteredProjects = computed(() => {
 </script>
 
 <template>
-  <section id="projects" class="py-20 bg-[#F3F4F8] relative px-4 sm:px-6 lg:px-8">
+  <section id="projects" class="py-20 dark:bg-[#000000] relative px-4 sm:px-6 lg:px-8">
     <div class="max-w-6xl mx-auto">
       
       <!-- En-tête de section One UI -->
@@ -49,7 +49,7 @@ const filteredProjects = computed(() => {
           class="px-5 py-2.5 rounded-full text-sm font-medium transition-all duration-200 active:scale-95"
           :class="activeTab === cat 
             ? 'bg-slate-800 text-white shadow-md' 
-            : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900 shadow-sm border border-slate-200/60'"
+            : 'bg-white text-slate-600 hover:bg-slate-100 hover:text-slate-900   border border-slate-200/60'"
         >
           {{ cat }}
         </button>
@@ -60,7 +60,7 @@ const filteredProjects = computed(() => {
         <article 
           v-for="(project, index) in filteredProjects" 
           :key="index"
-          class="group flex flex-col bg-white rounded-[28px] border border-slate-200/60 shadow-sm hover:shadow-xl transition-all duration-300 overflow-hidden"
+          class="group flex flex-col bg-white rounded-[28px] border border-slate-200/60   hover:shadow-xl transition-all duration-300 overflow-hidden"
         >
 
           <!-- Zone Image -->
@@ -81,7 +81,7 @@ const filteredProjects = computed(() => {
             <!-- Badge Projet Critique -->
             <span 
               v-if="project.featured" 
-              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full shadow-sm"
+              class="absolute top-4 left-4 bg-white/90 backdrop-blur-sm text-blue-600 text-xs font-bold px-3 py-1.5 rounded-full  "
             >
               Mise en avant
             </span>
@@ -123,7 +123,7 @@ const filteredProjects = computed(() => {
                 v-if="project.Demo && project.Demo !== '#'" 
                 :href="project.Demo" 
                 target="_blank" 
-                class="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-full text-sm font-medium transition-all active:scale-[0.97] shadow-sm"
+                class="flex-1 flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2.5 rounded-full text-sm font-medium transition-all active:scale-[0.97]  "
               >
                 <ExternalLink class="w-4 h-4" />
                 Ouvrir l'app
@@ -145,7 +145,7 @@ const filteredProjects = computed(() => {
       </div>
 
       <!-- État vide (Empty State One UI) -->
-      <div v-if="filteredProjects.length === 0" class="text-center py-24 bg-white rounded-[32px] border border-slate-200/60 shadow-sm max-w-2xl mx-auto mt-8">
+      <div v-if="filteredProjects.length === 0" class="text-center py-24 bg-white rounded-[32px] border border-slate-200/60   max-w-2xl mx-auto mt-8">
         <div class="inline-flex items-center justify-center w-16 h-16 rounded-full bg-slate-50 mb-4">
           <FolderGit2 class="w-8 h-8 text-slate-400" />
         </div>

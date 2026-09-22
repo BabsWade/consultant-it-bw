@@ -37,8 +37,8 @@ const toolsConfig = {
 </script>
 
 <template>
-  <section id="competences" class="py-20 bg-[#F3F4F8] relative px-4 sm:px-6 lg:px-8">
-    <div class="max-w-7xl mx-auto">
+  <section id="competences" dark:bg-[#000000] class="py-20 relative px-4 sm:px-6 lg:px-8">
+    <div class="max-w-6xl mx-auto">
       
       <!-- En-tête de section One UI -->
       <div class="mb-14 text-center max-w-2xl mx-auto space-y-3">
@@ -54,13 +54,13 @@ const toolsConfig = {
       </div>
 
       <!-- Grille Principale (Bento Layout) -->
-      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6">
+      <div class="grid grid-cols-1 md:grid-cols-2 xl:grid-cols-3 gap-6 max-w-6xl">
         
         <!-- Cartes Squircles pour chaque catégorie -->
         <div 
           v-for="(skillList, key) in skills" 
           :key="key"
-          class="bg-white/90 backdrop-blur-xl border border-slate-200/60 rounded-[32px] p-6 shadow-sm hover:shadow-md transition-all duration-300 group"
+          class="bg-white/90 backdrop-blur-xl border border-slate-200/60 rounded-[32px] p-6   hover:shadow-md transition-all duration-300 group"
         >
           <!-- En-tête de carte -->
           <div class="flex items-center gap-4 mb-6">
@@ -107,7 +107,7 @@ const toolsConfig = {
           <div 
             v-for="(toolList, key) in tools" 
             :key="key"
-            class="bg-white rounded-[24px] border border-slate-200/60 p-5 shadow-sm"
+            class="bg-white rounded-[24px] border border-slate-200/60 p-5  "
           >
             <h4 class="text-xs font-bold uppercase tracking-wider text-slate-400 mb-3">
               {{ toolsConfig[key] || key }}
