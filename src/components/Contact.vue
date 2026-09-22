@@ -1,5 +1,15 @@
 <script setup>
-import { Mail, Phone, Globe, Github, Linkedin, Terminal, Radio } from 'lucide-vue-next';
+import { 
+  Mail, 
+  Phone, 
+  Globe, 
+  Github, 
+  Linkedin, 
+  MessageSquare, 
+  Sparkles, 
+  MapPin, 
+  Clock 
+} from 'lucide-vue-next';
 
 // Utilisation stricte de tes données personnelles de contact
 const personalInfo = {
@@ -13,43 +23,43 @@ const personalInfo = {
 </script>
 
 <template>
-  <!-- Fond clair, grille industrielle et bordure haute massive -->
-  <section id="contact" class="py-20 border-t-4 border-brand-dark bg-brand-light relative tech-blueprint-bg">
+  <!-- Fond doux et épuré typique de One UI -->
+  <section id="contact" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
     
-    <!-- En-tête de section style Fiche d'Établissement de Liaison -->
-    <div class="mb-16 border-2 border-brand-dark bg-white p-8 brutal-shadow max-w-3xl mx-auto lg:mx-0">
-      <div class="inline-block bg-black text-white px-3 py-1 font-mono text-xs font-bold uppercase tracking-widest mb-4">
-        PRET A COLLABORER
+    <!-- En-tête de section style One UI -->
+    <div class="max-w-7xl mx-auto px-6 mb-12">
+      <div class="inline-flex items-center gap-2 bg-blue-100 dark:bg-blue-900/40 text-blue-700 dark:text-blue-400 px-4 py-1.5 rounded-full text-sm font-semibold mb-4">
+        <MessageSquare class="w-4 h-4" />
+        <span>Prêt à collaborer</span>
       </div>
-      <h2 class="text-3xl md:text-5xl font-black text-brand-dark uppercase tracking-tighter mb-4">
+      <h2 class="text-4xl md:text-5xl font-bold text-gray-900 dark:text-white tracking-tight mb-4">
         Établir une Connexion
       </h2>
-      <div class="w-16 h-2 bg-brand-dark mb-4"></div>
-      <p class="text-brand-muted font-mono text-sm leading-relaxed">
-        Canaux officiels pour planifier une consultation, soumettre un cahier des charges d'architecture web ou engager une collaboration technique.
+      <p class="text-lg text-gray-500 dark:text-gray-400 max-w-2xl leading-relaxed">
+        Canaux officiels pour planifier une consultation, soumettre un projet d'architecture web ou engager une collaboration technique.
       </p>
     </div>
 
-    <!-- Grille des terminaux de contact (Sans formulaire, disposition asymétrique) -->
-    <div class="max-w-7xl mx-auto grid grid-cols-1 lg:grid-cols-12 gap-8 items-start">
+    <!-- Grille des cartes de contact -->
+    <div class="max-w-7xl mx-auto px-6 grid grid-cols-1 lg:grid-cols-12 gap-6 md:gap-8 items-start">
       
-      <!-- BLOC GAUCHE : CANAUX DIRECTS DE SÉCURITÉ (7 colonnes) -->
-      <div class="lg:col-span-7 space-y-6">
+      <!-- BLOC GAUCHE : CANAUX DIRECTS DE CONTACT (7 colonnes) -->
+      <div class="lg:col-span-7 space-y-4 md:space-y-6">
         
         <!-- Canal E-mail -->
         <a :href="'mailto:' + personalInfo.email" 
-           class="block border-2 border-brand-dark bg-white p-6 brutal-shadow group transition-transform duration-200 hover:translate-x-1 hover:translate-y-1">
-          <div class="flex items-center justify-between border-b border-brand-dark/10 pb-3 mb-4 font-mono text-xs font-bold text-brand-muted">
-            <span>[ CHANNEL_01 // SECURE_MAIL ]</span>
-            <span class="text-brand-teal font-black">>> OVER_SMTP</span>
+           class="block bg-white dark:bg-[#1C1C1E] rounded-[28px] p-6 shadow-[0_2px_20px_rgba(0,0,0,0.04)] dark:shadow-none hover:scale-[1.01] transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3 text-xs font-semibold text-gray-400 dark:text-gray-500">
+            <span>CANAL 01</span>
+            <span class="text-blue-600 dark:text-blue-400 font-bold">E-mail direct</span>
           </div>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 border-2 border-brand-dark bg-brand-accent flex items-center justify-center text-brand-dark shrink-0">
+            <div class="w-12 h-12 rounded-full bg-blue-100 dark:bg-blue-900/40 text-blue-600 dark:text-blue-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
               <Mail class="w-6 h-6" />
             </div>
             <div class="overflow-hidden">
-              <span class="block font-mono text-[10px] uppercase font-black text-brand-muted">Adresse Courriel :</span>
-              <span class="block font-mono text-base md:text-xl font-black text-brand-dark break-all group-hover:text-brand-teal transition-colors">
+              <span class="block text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-0.5">Adresse Courriel</span>
+              <span class="block text-base sm:text-xl font-bold text-gray-900 dark:text-white truncate group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors">
                 {{ personalInfo.email }}
               </span>
             </div>
@@ -58,18 +68,18 @@ const personalInfo = {
 
         <!-- Canal Téléphonique -->
         <a :href="'tel:' + personalInfo.phone.replace(/\s+/g, '')" 
-           class="block border-2 border-brand-dark bg-white p-6 brutal-shadow group transition-transform duration-200 hover:translate-x-1 hover:translate-y-1">
-          <div class="flex items-center justify-between border-b border-brand-dark/10 pb-3 mb-4 font-mono text-xs font-bold text-brand-muted">
-            <span>[ CHANNEL_02 // TELEPHONY_NODE ]</span>
-            <span class="text-brand-teal font-black">>> GSM_ROUTING</span>
+           class="block bg-white dark:bg-[#1C1C1E] rounded-[28px] p-6 shadow-[0_2px_20px_rgba(0,0,0,0.04)] dark:shadow-none hover:scale-[1.01] transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3 text-xs font-semibold text-gray-400 dark:text-gray-500">
+            <span>CANAL 02</span>
+            <span class="text-emerald-600 dark:text-emerald-400 font-bold">Ligne GSM</span>
           </div>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 border-2 border-brand-dark bg-brand-light flex items-center justify-center text-brand-dark shrink-0 group-hover:bg-brand-accent transition-colors">
+            <div class="w-12 h-12 rounded-full bg-emerald-100 dark:bg-emerald-900/40 text-emerald-600 dark:text-emerald-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
               <Phone class="w-6 h-6" />
             </div>
-            <div>
-              <span class="block font-mono text-[10px] uppercase font-black text-brand-muted">Ligne Directe :</span>
-              <span class="block font-mono text-base md:text-xl font-black text-brand-dark group-hover:text-brand-teal transition-colors">
+            <div class="overflow-hidden">
+              <span class="block text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-0.5">Ligne Directe</span>
+              <span class="block text-base sm:text-xl font-bold text-gray-900 dark:text-white truncate group-hover:text-emerald-600 dark:group-hover:text-emerald-400 transition-colors">
                 {{ personalInfo.phone }}
               </span>
             </div>
@@ -79,18 +89,18 @@ const personalInfo = {
         <!-- Site Web / Domaine -->
         <a :href="personalInfo.website" 
            target="_blank"
-           class="block border-2 border-brand-dark bg-white p-6 brutal-shadow group transition-transform duration-200 hover:translate-x-1 hover:translate-y-1">
-          <div class="flex items-center justify-between border-b border-brand-dark/10 pb-3 mb-4 font-mono text-xs font-bold text-brand-muted">
-            <span>[ CHANNEL_03 // WEB_HOST ]</span>
-            <span class="text-brand-teal font-black">>> HTTPS_LIVE</span>
+           class="block bg-white dark:bg-[#1C1C1E] rounded-[28px] p-6 shadow-[0_2px_20px_rgba(0,0,0,0.04)] dark:shadow-none hover:scale-[1.01] transition-all duration-300 group">
+          <div class="flex items-center justify-between mb-3 text-xs font-semibold text-gray-400 dark:text-gray-500">
+            <span>CANAL 03</span>
+            <span class="text-purple-600 dark:text-purple-400 font-bold">Plateforme Web</span>
           </div>
           <div class="flex items-center gap-4">
-            <div class="w-12 h-12 border-2 border-brand-dark bg-brand-light flex items-center justify-center text-brand-dark shrink-0 group-hover:bg-brand-accent transition-colors">
+            <div class="w-12 h-12 rounded-full bg-purple-100 dark:bg-purple-900/40 text-purple-600 dark:text-purple-400 flex items-center justify-center shrink-0 group-hover:scale-105 transition-transform">
               <Globe class="w-6 h-6" />
             </div>
             <div class="overflow-hidden">
-              <span class="block font-mono text-[10px] uppercase font-black text-brand-muted">Serveur Personnel :</span>
-              <span class="block font-mono text-base md:text-xl font-black text-brand-dark break-all group-hover:text-brand-teal transition-colors">
+              <span class="block text-xs font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider mb-0.5">Site Officiel</span>
+              <span class="block text-base sm:text-xl font-bold text-gray-900 dark:text-white truncate group-hover:text-purple-600 dark:group-hover:text-purple-400 transition-colors">
                 {{ personalInfo.website }}
               </span>
             </div>
@@ -99,55 +109,71 @@ const personalInfo = {
 
       </div>
 
-      <!-- BLOC DROIT : MATRICE SOCIALE & PING RÉSEAU (5 colonnes) -->
-      <div class="lg:col-span-5 space-y-6 w-full">
+      <!-- BLOC DROIT : PROFILES SOCIAUX & STATUT (5 colonnes) -->
+      <div class="lg:col-span-5 space-y-4 md:space-y-6 w-full">
         
-        <!-- Console Réseaux / Repères Git & LinkedIn -->
-        <div class="border-2 border-brand-dark bg-white brutal-shadow p-6">
-          <div class="font-mono text-sm font-black text-brand-dark uppercase tracking-wider mb-5 pb-2 border-b-2 border-brand-dark flex items-center gap-2">
-            <Terminal class="w-4 h-4 text-brand-teal" />
-            [ REMOTE_INDEXES ]
-          </div>
+        <!-- Cartes Réseaux / Repères GitHub & LinkedIn -->
+        <div class="bg-white dark:bg-[#1C1C1E] rounded-[32px] p-6 md:p-8 shadow-[0_2px_20px_rgba(0,0,0,0.04)] dark:shadow-none">
+          <h3 class="text-lg font-bold text-gray-900 dark:text-white mb-6 flex items-center gap-3">
+            <div class="w-8 h-8 rounded-full bg-indigo-100 dark:bg-indigo-900/40 text-indigo-600 dark:text-indigo-400 flex items-center justify-center">
+              <Sparkles class="w-4 h-4" />
+            </div>
+            Réseaux & Code
+          </h3>
           
-          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4 font-mono text-xs font-bold">
+          <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
             <!-- GitHub Link -->
             <a :href="personalInfo.github" 
                target="_blank"
-               class="flex items-center gap-3 p-4 bg-brand-light border border-brand-dark text-brand-dark hover:bg-black hover:text-white transition-all">
-              <Github class="w-5 h-5 shrink-0" />
+               class="flex items-center gap-3.5 p-4 bg-gray-50 dark:bg-[#2C2C2E] rounded-2xl hover:bg-gray-100 dark:hover:bg-[#3A3A3C] transition-colors group">
+              <div class="w-10 h-10 rounded-full bg-gray-900 text-white dark:bg-white dark:text-black flex items-center justify-center shrink-0">
+                <Github class="w-5 h-5" />
+              </div>
               <div class="overflow-hidden">
-                <span class="block text-[9px] uppercase tracking-wider opacity-60">REPOSITORIES</span>
-                <span class="font-black uppercase">GITHUB // CODE</span>
+                <span class="block text-[11px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">GitHub</span>
+                <span class="text-sm font-bold text-gray-900 dark:text-white truncate block">Repositories</span>
               </div>
             </a>
             
             <!-- LinkedIn Link -->
             <a :href="personalInfo.linkedin" 
                target="_blank"
-               class="flex items-center gap-3 p-4 bg-brand-light border border-brand-dark text-brand-dark hover:bg-black hover:text-white transition-all">
-              <Linkedin class="w-5 h-5 shrink-0" />
+               class="flex items-center gap-3.5 p-4 bg-gray-50 dark:bg-[#2C2C2E] rounded-2xl hover:bg-gray-100 dark:hover:bg-[#3A3A3C] transition-colors group">
+              <div class="w-10 h-10 rounded-full bg-[#0A66C2] text-white flex items-center justify-center shrink-0">
+                <Linkedin class="w-5 h-5" />
+              </div>
               <div class="overflow-hidden">
-                <span class="block text-[9px] uppercase tracking-wider opacity-60">NETWORK</span>
-                <span class="font-black uppercase">LINKEDIN // PROFILE</span>
+                <span class="block text-[11px] font-semibold text-gray-400 dark:text-gray-500 uppercase tracking-wider">LinkedIn</span>
+                <span class="text-sm font-bold text-gray-900 dark:text-white truncate block">Profil Pro</span>
               </div>
             </a>
           </div>
         </div>
 
-        <!-- Faux terminal de log d'intégrité de connexion -->
-        <div class="bg-black text-white p-5 border-2 border-brand-dark font-mono text-[11px] leading-relaxed brutal-shadow-sm">
-          <div class="flex items-center gap-2 text-brand-accent font-black uppercase tracking-widest border-b border-white/20 pb-2 mb-3">
-            <Radio class="w-3.5 h-3.5 animate-pulse text-brand-accent" />
-            LIVE_TRANSMISSION_STATUS
+        <!-- Widget de Statut Système / Disponibilité -->
+        <div class="bg-white dark:bg-[#1C1C1E] rounded-[32px] p-6 md:p-8 shadow-[0_2px_20px_rgba(0,0,0,0.04)] dark:shadow-none">
+          <div class="flex items-center justify-between pb-4 mb-4 border-b border-gray-100 dark:border-gray-800">
+            <div class="flex items-center gap-2.5">
+              <span class="relative flex h-3 w-3">
+                <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+                <span class="relative inline-flex rounded-full h-3 w-3 bg-emerald-500"></span>
+              </span>
+              <span class="text-sm font-bold text-gray-900 dark:text-white">Statut Réseau</span>
+            </div>
+            <span class="text-xs font-semibold px-3 py-1 bg-emerald-100 dark:bg-emerald-900/40 text-emerald-700 dark:text-emerald-400 rounded-full">
+              Disponible
+            </span>
           </div>
-          <div class="space-y-1 text-white/70">
-            <div><span class="text-brand-accent">[READY]</span> Awaiting system requests from external hosts.</div>
-            <div><span class="text-brand-accent">[NODES]</span> Primary link route set via Thiès, Senegal.</div>
-            <div><span class="text-brand-accent">[INFO]</span> E-mail responses processed within 24 standard hours.</div>
-          </div>
-          <!-- Fausse ligne d'état technique -->
-          <div class="mt-4 pt-2 border-t border-white/10 text-[9px] text-white/40 uppercase tracking-widest text-right">
-            WADE_CORE_NET_v4.0
+
+          <div class="space-y-3 text-sm text-gray-600 dark:text-gray-300">
+            <div class="flex items-center gap-3">
+              <MapPin class="w-4 h-4 text-gray-400 shrink-0" />
+              <span>Thiès / Dakar, Sénégal</span>
+            </div>
+            <div class="flex items-center gap-3">
+              <Clock class="w-4 h-4 text-gray-400 shrink-0" />
+              <span>Réponse sous 24 heures ouvrées</span>
+            </div>
           </div>
         </div>
 
@@ -155,17 +181,13 @@ const personalInfo = {
 
     </div>
 
-    <!-- Zone de Pied de Page / Signature intégrée au bloc contact -->
-    <div class="mt-20 max-w-7xl mx-auto pt-8 border-t-2 border-brand-dark text-center font-mono text-xs font-bold text-brand-muted flex flex-col sm:flex-row items-center justify-between gap-4">
-      <div>[ DESIGNED_FOR_EXTREME_RELIABILITY // 2026 ]</div>
-      <div class="uppercase text-brand-dark bg-brand-accent px-3 py-0.5 border border-brand-dark shadow-[1px_1px_0px_#000]">
-        © {{ personalInfo.name }} // TOUS DROITS RESERVES.
+    <!-- Zone de Pied de Page / Signature -->
+    <div class="mt-20 max-w-7xl mx-auto px-6 pt-8 border-t border-gray-200/60 dark:border-gray-800 text-center flex flex-col sm:flex-row items-center justify-between gap-4 text-xs font-medium text-gray-400 dark:text-gray-500">
+      <div>Conçu pour une fiabilité maximale</div>
+      <div class="px-4 py-1.5 bg-gray-100 dark:bg-[#1C1C1E] text-gray-700 dark:text-gray-300 rounded-full font-semibold">
+        © {{ personalInfo.name }} • Tous droits réservés
       </div>
     </div>
 
   </section>
 </template>
-
-<style scoped>
-/* L'intégrité de la charte graphique 0px border-radius est maintenue par style.css */
-</style>

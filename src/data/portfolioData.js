@@ -37,68 +37,158 @@ export const personalInfo = {
 
 export const projects = [
   {
-    Image: reesaoImage,
-    title: "Portail Web du REESAO",
-    category: "Web",
-    description:
-      "Développement et administration du portail web du Réseau pour l’Excellence de l’Enseignement Supérieur en Afrique de l’Ouest.",
-    technologies: [
-      "Vue.js 3",
-      "Vite",
-      "Tailwind CSS",
-      "D3.js",
-      "REST API"
-    ],
-    Demo: "https://reesao.org",
-    CodeGithub: "https://github.com/"
+    id: 1,
+    title: "Application Mobile de Gestion de Produits",
+    category: "Mobile",
+    description: "Application mobile cross-platform avec authentification sécurisée par Token JWT et backend RESTful.",
+    technologies: ["Flutter", "Laravel", "JWT", "REST API"],
+    featured: true,
+    Image: null, // Ajoutez le chemin de votre image (ex: '/images/flutter-app.png')
+    CodeGithub: "https://github.com/votre-user/nom-du-repo", // Remplacez par votre lien GitHub
+    Demo: "#" // Remplacez par le lien démo/APK ou laissez "#" s'il n'y en a pas
   },
-
   {
-    Image: knowledgeHubImage,
-    title: "Knowledge Hub - ADEA (BAD)",
+    id: 2,
+    title: "Plateforme GAR (Gestion Axée sur les Résultats)",
     category: "Web",
-    description:
-      "Contribution au développement de la plateforme de librairie électronique du Knowledge Hub pour l'ADEA (Banque Africaine de Développement).",
-    technologies: [
-      "Drupal",
-      "PHP",
-      "MySQL",
-      "CSS3"
-    ],
-    Demo: "https://knowledgehub.adeanet.org/",
-    featured: true
+    description: "Système web complet de suivi et d'évaluation des performances institutionnelles en mode GAR.",
+    technologies: ["React.js", "Django", "PostgreSQL", "Tailwind CSS"],
+    featured: true,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "https://votre-demo.com"
   },
-
   {
-    Image: unchkImage,
-    title: "Écosystème Digital UN-CHK",
+    id: 3,
+    title: "Application Web d’Épicerie",
     category: "Web",
-    description:
-      "Conception, développement et maintenance de +8 sites institutionnels (Portail UN-CHK, École Doctorale, Legaltech Forum, Formation continue).",
-    technologies: [
-      "WordPress",
-      "Elementor",
-      "PHP",
-      "SEO"
-    ],
-    Demo: "https://www.unchk.sn/",
-    CodeGithub: "https://github.com/"
+    description: "Plateforme web de commerce de proximité avec gestion de panier, catalogue produits et interface dynamique.",
+    technologies: ["React.js", "Tailwind CSS", "JavaScript"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
   },
-
   {
-    Image: gestionEtablissementImage,
-    title: "Application Gestion Établissement",
-    category: "Full-Stack Web App",
-    description:
-      "Conception et développement complet d'une application de gestion d'école avec tableau de bord complet.",
-    technologies: [
-      "React.js",
-      "Material UI",
-      "PHP",
-      "MySQL"
-    ],
-    Demo: "#",
-    CodeGithub: "https://github.com/"
+    id: 4,
+    title: "Système de Réservation de Billets Desktop",
+    category: "Desktop",
+    description: "Logiciel client lourd permettant la réservation, le suivi des billets et la gestion des passagers.",
+    technologies: ["Java Swing", "MySQL", "JDBC"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
+  },
+  {
+    id: 5,
+    title: "Gestion de Jardin Potager",
+    category: "Web",
+    description: "Plateforme web interactive de planification des cultures, suivi d'arrosage et gestion des récoltes.",
+    technologies: ["React.js", "Spring Boot", "REST API"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
+  },
+  {
+    id: 6,
+    title: "Webservice RESTful de Gestion Bancaire",
+    category: "Backend",
+    description: "API REST sécurisée pour opérations bancaires (création de comptes, virements, relevés et transactions).",
+    technologies: ["Spring Boot", "Maven", "Postman", "REST API"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
+  },
+  {
+    id: 7,
+    title: "Journal du Développeur (Blog)",
+    category: "Web",
+    description: "Plateforme de blogging technique avec système d'articles, gestion des catégories et espace commentaires.",
+    technologies: ["Django", "Python", "SQLite", "Bootstrap"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
+  },
+  {
+    id: 8,
+    title: "Site Vitrine Services Informatiques",
+    category: "Web",
+    description: "Site responsive de présentation de prestations informatiques avec formulaire de contact interactif.",
+    technologies: ["HTML5", "CSS3", "JavaScript"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "https://votre-demo.com"
+  },
+  {
+    id: 9,
+    title: "Application Chat en Temps Réel",
+    category: "Web",
+    description: "Application de messagerie instantanée utilisant les WebSockets pour la communication bidirectionnelle.",
+    technologies: ["Node.js", "Socket.io", "Express.js"],
+    featured: true,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
+  },
+  {
+    id: 10,
+    title: "UI/UX Plateforme Gestion d'Événements",
+    category: "Design",
+    description: "Maquettage UI/UX haute fidélité pour une application de réservation et gestion d'événements.",
+    technologies: ["Figma", "UI/UX", "Prototypage"],
+    featured: false,
+    Image: null,
+    CodeGithub: "#",
+    Demo: "https://www.figma.com/file/votre-lien-figma" // Lien Figma dans Demo
+  },
+  {
+    id: 11,
+    title: "UI/UX Application Jardin Potager",
+    category: "Design",
+    description: "Design d'interface utilisateur et parcours client optimisé pour la gestion de potager.",
+    technologies: ["Figma", "Design System"],
+    featured: false,
+    Image: null,
+    CodeGithub: "#",
+    Demo: "https://www.figma.com/file/votre-lien-figma"
+  },
+  {
+    id: 12,
+    title: "Portfolio Infographiste",
+    category: "CMS",
+    description: "Site web personnel sur-mesure mettant en valeur des créations graphiques et visuelles.",
+    technologies: ["WordPress", "Elementor", "CSS Custom"],
+    featured: false,
+    Image: null,
+    CodeGithub: "#",
+    Demo: "https://votre-site-wordpress.com"
+  },
+  {
+    id: 13,
+    title: "Application Mobile de Gestion de Recettes",
+    category: "Mobile",
+    description: "Application mobile de recherche de recettes avec sauvegarde locale hors-ligne via AsyncStorage.",
+    technologies: ["React Native", "TypeScript", "AsyncStorage"],
+    featured: false,
+    Image: null,
+    CodeGithub: "https://github.com/votre-user/nom-du-repo",
+    Demo: "#"
+  },
+  {
+    id: 14,
+    title: "Scénarisation de Cours LMS Moodle",
+    category: "E-Learning",
+    description: "Conception pédagogique, intégration de contenus interactifs et scénarisation de parcours d'apprentissage.",
+    technologies: ["Moodle", "Ingénierie Pédagogique", "H5P"],
+    featured: false,
+    Image: null,
+    CodeGithub: "#",
+    Demo: "https://votre-moodle.com"
   }
 ];
 

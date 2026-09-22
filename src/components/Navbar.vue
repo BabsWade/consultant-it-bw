@@ -4,9 +4,9 @@ import { Home, Briefcase, FolderGit2, Code2, GraduationCap, Mail } from 'lucide-
 
 const navItems = [
   { name: 'Accueil', href: '#home', icon: Home },
-  { name: 'Experiences', href: '#experiences', icon: Briefcase },
+  { name: 'Expériences', href: '#experiences', icon: Briefcase },
   { name: 'Projets', href: '#projects', icon: FolderGit2 },
-  { name: 'Competences', href: '#competences', icon: Code2 },
+  { name: 'Compétences', href: '#competences', icon: Code2 },
   { name: 'Formation', href: '#formation', icon: GraduationCap },
   { name: 'Contact', href: '#contact', icon: Mail },
 ];
@@ -15,15 +15,17 @@ const activeTab = ref('#home');
 </script>
 
 <template>
-  <!-- NAVIGATION MOBILE (Barre fixe en bas de l'écran, pas d'arrondis, bordure supérieure noire épaisse) -->
-  <nav class="md:hidden fixed bottom-0 left-0 w-full bg-white border-t-4 border-brand-dark z-50">
-    <ul class="flex justify-around items-center h-16 px-1 divide-x divide-brand-dark/20">
-      <li v-for="item in navItems" :key="item.name" class="flex-1 text-center h-full">
+  <!-- NAVIGATION MOBILE : Barre flottante style Pilule One UI en bas d'écran -->
+  <nav class="md:hidden fixed bottom-4 left-4 right-4 bg-white/80 backdrop-blur-xl border border-slate-200/80 rounded-full shadow-lg shadow-slate-900/5 z-50 p-1.5">
+    <ul class="flex justify-around items-center">
+      <li v-for="item in navItems" :key="item.name" class="relative">
         <a 
           :href="item.href"
           @click="activeTab = item.href"
-          class="flex flex-col items-center justify-center h-full text-xs font-mono font-black uppercase tracking-wider transition-colors duration-150"
-          :class="activeTab === item.href ? 'bg-brand-accent text-brand-dark' : 'text-brand-muted hover:bg-brand-light hover:text-brand-dark'"
+          class="flex flex-col items-center justify-center p-2.5 rounded-full text-xs transition-all duration-200 active:scale-90"
+          :class="activeTab === item.href 
+            ? 'bg-blue-600 text-white shadow-sm' 
+            : 'text-slate-500 hover:text-slate-900 hover:bg-slate-100/70'"
         >
           <component :is="item.icon" class="w-5 h-5" />
           <span class="sr-only">{{ item.name }}</span>
@@ -32,56 +34,66 @@ const activeTab = ref('#home');
     </ul>
   </nav>
 
-  <!-- NAVIGATION DESKTOP (Panneau latéral fixe d'ingénierie brute, angles stricts) -->
-  <aside class="hidden md:flex flex-col fixed left-0 top-0 h-screen w-64 bg-white border-r-4 border-brand-dark z-50 py-8 px-4 justify-between">
+  <!-- NAVIGATION DESKTOP : Panneau latéral flottant (Card Squircle One UI) -->
+  <aside class="hidden md:flex flex-col fixed left-6 top-6 bottom-6 w-64 bg-white/90 backdrop-blur-xl border border-slate-200/70 rounded-[32px] z-50 p-6 justify-between shadow-sm">
     
-    <!-- En-tête du Panneau / Identifiants -->
+    <!-- En-tête : Badge utilisateur & Statut -->
     <div class="space-y-4">
-      <div class="border-2 border-brand-dark bg-brand-accent p-4 brutal-shadow-sm text-center">
-        <a href="#home" class="text-3xl font-black text-brand-dark tracking-tighter uppercase block leading-none">
-          B.WADE
-        </a>
-        <div class="w-full h-[1px] bg-brand-dark my-2"></div>
-        <p class="text-[9px] font-mono font-black text-brand-dark uppercase tracking-widest leading-none">
-          [ CONCEPTEUR_SYSTEMES ]
-        </p>
+      <div class="flex items-center gap-3 p-3 bg-slate-100/80 rounded-2xl border border-slate-200/60">
+        <div class="w-10 h-10 rounded-full bg-blue-600 text-white font-extrabold flex items-center justify-center text-sm shadow-sm shrink-0">
+          BW
+        </div>
+        <div class="min-w-0">
+          <a href="#home" class="font-bold text-slate-900 text-sm tracking-tight block truncate hover:text-blue-600 transition-colors">
+            Babacar WADE
+          </a>
+          <p class="text-[10px] font-semibold text-slate-500 uppercase tracking-wider truncate">
+            Concepteur Système
+          </p>
+        </div>
       </div>
-      
-      <!-- Témoin d'activité matériel -->
-      <div class="bg-brand-light border border-brand-dark px-3 py-1.5 font-mono text-[10px] font-bold text-brand-teal flex items-center gap-2">
-        <span class="w-2.5 h-2.5 bg-brand-teal inline-block animate-pulse"></span>
-        DISPONIBLE
+
+      <!-- Témoin d'activité -->
+      <div class="inline-flex items-center gap-2 px-3 py-1.5 rounded-full bg-emerald-50 border border-emerald-100 text-xs font-semibold text-emerald-700 w-full">
+        <span class="relative flex h-2 w-2">
+          <span class="animate-ping absolute inline-flex h-full w-full rounded-full bg-emerald-400 opacity-75"></span>
+          <span class="relative inline-flex rounded-full h-2 w-2 bg-emerald-500"></span>
+        </span>
+        <span class="truncate">Disponible pour missions</span>
       </div>
     </div>
 
-    <!-- Liens de contrôle de l'application -->
-    <ul class="space-y-2 flex-1 pt-10 font-mono text-xs font-black uppercase tracking-wider">
-      <li v-for="item in navItems" :key="item.name">
-        <a 
-          :href="item.href"
-          @click="activeTab = item.href"
-          class="flex items-center gap-4 px-4 py-3 border-2 transition-all"
-          :class="activeTab === item.href 
-            ? 'bg-black text-white border-black brutal-shadow-sm -translate-x-0.5 -translate-y-0.5' 
-            : 'bg-white text-brand-dark border-transparent hover:bg-brand-light hover:border-brand-dark'"
-        >
-          <component 
-            :is="item.icon" 
-            class="w-4 h-4 shrink-0" 
-          />
-          <span>{{ item.name }}</span>
-        </a>
-      </li>
-    </ul>
+    <!-- Liens de navigation (Pills One UI) -->
+    <nav class="my-auto py-4">
+      <ul class="space-y-1.5 font-medium text-sm">
+        <li v-for="item in navItems" :key="item.name">
+          <a 
+            :href="item.href"
+            @click="activeTab = item.href"
+            class="flex items-center gap-3.5 px-4 py-3 rounded-full transition-all duration-200 active:scale-[0.97]"
+            :class="activeTab === item.href 
+              ? 'bg-blue-600 text-white font-semibold shadow-sm' 
+              : 'text-slate-600 hover:bg-slate-100 hover:text-slate-900'"
+          >
+            <component 
+              :is="item.icon" 
+              class="w-4 h-4 shrink-0" 
+            />
+            <span>{{ item.name }}</span>
+          </a>
+        </li>
+      </ul>
+    </nav>
 
-    <!-- Pied de carte / Signature Matrice -->
-    <div class="pt-6 border-t-2 border-brand-dark font-mono text-[10px] text-brand-muted space-y-2">
-      <div>VERSION 15/09/2026</div>
-      
+    <!-- Pied de panneau -->
+    <div class="pt-4 border-t border-slate-100 flex items-center justify-between text-[11px] text-slate-400 font-medium">
+      <span>One UI 8.5</span>
+      <span class="px-2 py-0.5 rounded-full bg-slate-100 text-slate-600 font-mono text-[10px]">v2.0</span>
     </div>
+
   </aside>
 </template>
 
 <style scoped>
-/* L'intégralité des angles droits stricts (0px) est assurée nativement par la structure globale */
+/* Les animations de pression (scale) et les arrondis Squircles sont gérés nativement par Tailwind */
 </style>

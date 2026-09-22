@@ -1,50 +1,114 @@
 @import "tailwindcss";
 
 @theme {
-  /* Refonte complète pour un thème CLAIR, BRUTALISTE et ANGULAIRE */
-  --color-brand-dark: #000000;       /* Noir pur pour les bordures et textes forts */
-  --color-brand-navy: #111111;       
-  --color-brand-card: #ffffff;       /* Fond des blocs blanc pur */
-  --color-brand-accent: #ffde4d;     /* Jaune d'ingénieur / Alerte (Style technique) */
-  --color-brand-hover: #fcd34d;     
-  --color-brand-light: #f3f4f6;      /* Fond de page gris technique industriel clair */
-  --color-brand-muted: #4b5563;      /* Texte secondaire */
-  --color-brand-teal: #008080;       /* Couleur de contrôle */
+  /* --- Palette de Couleurs Samsung One UI 8.5 --- */
+  
+  /* Mode Clair */
+  --color-oneui-bg: #F2F2F7;               /* Fond système gris très léger */
+  --color-oneui-surface: #FFFFFF;          /* Fond des cartes (Niveau 1) */
+  --color-oneui-subsurface: #F8F9FA;       /* Fond des sous-éléments / bulles (Niveau 2) */
+  
+  /* Mode Sombre (OLED) */
+  --color-oneui-bg-dark: #000000;          /* Fond système noir absolu OLED */
+  --color-oneui-surface-dark: #1C1C1E;     /* Fond des cartes sombres */
+  --color-oneui-subsurface-dark: #2C2C2E;  /* Fond des bulles sombres */
+  --color-oneui-hover-dark: #3A3A3C;       /* Survol en mode sombre */
+  
+  /* Couleur d'Accentuation Signature Samsung */
+  --color-oneui-accent: #0B62F6;          /* Bleu One UI Cobalt */
+  --color-oneui-accent-hover: #084EC2;
+
+  /* Rétro-compatibilité avec le thème brutaliste 'brand' (évite de casser les composants restants) */
+  --color-brand-light: var(--color-oneui-bg);
+  --color-brand-dark: #191919;
+  --color-brand-accent: var(--color-oneui-accent);
+  --color-brand-teal: #0B62F6;
+  --color-brand-muted: #767676;
+
+  /* Typographie fluide */
+  --font-sans: "SamsungOne", -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, sans-serif;
+  --font-mono: "SF Mono", "Fira Code", monospace;
+
+  /* Rayons de bordure Squircles One UI 8.5 */
+  --radius-squircle-xl: 36px;
+  --radius-squircle: 32px;
+  --radius-squircle-sm: 24px;
+  --radius-squircle-xs: 16px;
+
+  /* Ombres diffuses et douces */
+  --shadow-oneui-sm: 0 2px 12px rgba(0, 0, 0, 0.03);
+  --shadow-oneui: 0 4px 24px rgba(0, 0, 0, 0.04);
+  --shadow-oneui-hover: 0 12px 32px rgba(0, 0, 0, 0.08);
 }
 
-html {
-  scroll-behavior: smooth;
+/* --- Styles de base et lissage global --- */
+@layer base {
+  html {
+    scroll-behavior: smooth;
+    -webkit-tap-highlight-color: transparent;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+  }
+
+  body {
+    background-color: var(--color-oneui-bg);
+    color: #191919;
+    font-family: var(--font-sans);
+    transition: background-color 0.3s ease, color 0.3s ease;
+  }
+
+  /* Prise en charge automatique du Dark Mode au niveau du body */
+  .dark body,
+  body.dark {
+    background-color: var(--color-oneui-bg-dark);
+    color: #FFFFFF;
+  }
+
+  /* --- Barre de défilement discrète One UI (Pilule flottante) --- */
+  ::-webkit-scrollbar {
+    width: 6px;
+    height: 6px;
+  }
+
+  ::-webkit-scrollbar-track {
+    background: transparent;
+  }
+
+  ::-webkit-scrollbar-thumb {
+    background: rgba(120, 120, 128, 0.3);
+    border-radius: 9999px;
+  }
+
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(120, 120, 128, 0.5);
+  }
+
+  /* Anneau de focus accessible et arrondi */
+  *:focus-visible {
+    outline: 2px solid var(--color-oneui-accent);
+    outline-offset: 3px;
+    border-radius: 12px;
+  }
+
+  /* Sélection de texte subtile */
+  ::selection {
+    background-color: rgba(11, 98, 246, 0.2);
+    color: var(--color-oneui-accent);
+  }
 }
 
-body {
-  background-color: var(--color-brand-light);
-  color: var(--color-brand-dark);
-  font-family: 'Courier New', Courier, monospace; /* Typographie machine/ingénieur */
-  margin: 0;
-  overflow-x: hidden;
-}
+/* --- Utilitaires de style One UI --- */
+@layer utilities {
+  /* Effet de verre dépoli One UI (Barres de navigation & En-têtes) */
+  .oneui-glass {
+    background-color: rgba(255, 255, 255, 0.75);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
 
-/* Grille technique ultra-marquée en fond (Blueprint industriel) */
-.tech-blueprint-bg {
-  background-image: 
-    linear-gradient(rgba(0, 0, 0, 0.07) 1px, transparent 1px),
-    linear-gradient(90deg, rgba(0, 0, 0, 0.07) 1px, transparent 1px);
-  background-size: 30px 30px;
-}
-
-/* Suppression globale forcée de tous les arrondis sur l'application */
-* {
-  border-radius: 0px !important;
-}
-
-/* Ombre brutale (Neo-brutalism flat shadow) */
-.brutal-shadow {
-  box-shadow: 8px 8px 0px #000000;
-}
-.brutal-shadow-sm {
-  box-shadow: 4px 4px 0px #000000;
-}
-.brutal-shadow-btn:hover {
-  box-shadow: 2px 2px 0px #000000;
-  transform: translate(2px, 2px);
+  .dark .oneui-glass {
+    background-color: rgba(28, 28, 30, 0.75);
+    backdrop-filter: blur(20px) saturate(180%);
+    -webkit-backdrop-filter: blur(20px) saturate(180%);
+  }
 }

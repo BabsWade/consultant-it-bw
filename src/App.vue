@@ -11,46 +11,39 @@ import Contact from './components/Contact.vue';
 
 <template>
   <!-- 
-    Refonte complète du conteneur principal :
-    Bascule sur un fond gris technique clair industriel et des textes noirs purs.
-    Suppression totale de toute transition douce au profit de blocs stricts et nets.
+    Refonte One UI :
+    Fonds dynamiques clairs/sombres, textes adaptés, et transitions fluides.
+    Suppression des bordures massives.
   -->
-  <div class="min-h-screen bg-brand-light text-brand-dark selection:bg-brand-accent selection:text-brand-dark antialiased">
+  <div class="min-h-screen bg-[#F2F2F7] dark:bg-[#000000] text-gray-900 dark:text-white selection:bg-blue-200 dark:selection:bg-blue-900 selection:text-blue-900 dark:selection:text-blue-100 antialiased transition-colors duration-300">
     
     <!-- Panneau de commande de navigation (Sidebar / Bottom bar) -->
     <Navbar />
 
     <!-- 
-      Layout principal Brutaliste :
-      - Sur mobile : espace en bas (pb-20) pour ne pas chevaucher le Bottom Nav.
-      - Sur desktop : décalage gauche strict (md:ml-64) correspondant aux 4px de bordure + largeur de la Sidebar.
-      - Les sections s'empilent sans arrondis avec des séparations nettes via la classe 'tech-blueprint-bg'.
+      Layout principal One UI :
+      - Sur mobile : espace en bas (pb-24) pour aérer au-dessus du Bottom Nav.
+      - Sur desktop : décalage gauche doux (md:ml-64).
+      - Finies les séparations agressives entre les sections, elles respirent naturellement.
     -->
-    <main class="pb-20 md:pb-0 md:ml-64 border-l-0 md:border-l-4 border-brand-dark min-h-screen">
+    <main class="pb-24 md:pb-0 md:ml-64 min-h-screen">
       
-      <!-- Conteneur global rectiligne pour le contenu -->
-      <div class="divide-y-4 divide-brand-dark">
-        <!-- Index d'ancrage 01 -->
+      <!-- Conteneur global fluide -->
+      <div class="flex flex-col w-full">
         <div id="home">
           <Hero />
         </div>
         
-        <!-- Index d'ancrage 02 -->
-       <!--- <Services /> -->
+        <!-- <Services /> -->
         
-        <!-- Index d'ancrage 03 -->
         <Experiences />
         
-        <!-- Index d'ancrage 04 -->
         <Projects />
         
-        <!-- Index d'ancrage 05 -->
         <Competences />
         
-        <!-- Index d'ancrage 06 -->
         <Formation />
         
-        <!-- Index d'ancrage 07 -->
         <Contact />
       </div>
 
@@ -60,27 +53,43 @@ import Contact from './components/Contact.vue';
 
 <style>
 /* 
-  Styles globaux de secours pour sécuriser le rendu brutaliste.
-  Force l'affichage rectiligne sur toute la profondeur du DOM de l'application.
+  Réinitialisation globale pour la fluidité One UI 
+  (Suppression DÉFINITIVE du border-radius: 0px !important)
 */
-* {
-  border-radius: 0px !important;
-  box-shadow: none;
+html {
+  scroll-behavior: smooth; /* Défilement doux entre les ancres */
+  -webkit-tap-highlight-color: transparent; /* Retire le clignotement bleu au clic sur mobile */
 }
 
-/* Redéfinition brute de la barre de défilement (Scrollbar d'usine Windows 95) */
+/* 
+  Refonte de la barre de défilement (Scrollbar One UI / Android)
+  Design minimaliste, fin et arrondi
+*/
 ::-webkit-scrollbar {
-  width: 12px;
+  width: 6px;
+  height: 6px;
 }
+
 ::-webkit-scrollbar-track {
-  background: var(--color-brand-light);
-  border-left: 2px solid var(--color-brand-dark);
+  background: transparent;
 }
+
 ::-webkit-scrollbar-thumb {
-  background: var(--color-brand-dark);
-  border: 2px solid var(--color-brand-light);
+  background: rgba(156, 163, 175, 0.4); /* Gris doux semi-transparent */
+  border-radius: 10px; /* Bords parfaitement arrondis */
 }
+
 ::-webkit-scrollbar-thumb:hover {
-  background: var(--color-brand-teal);
+  background: rgba(156, 163, 175, 0.7);
+}
+
+/* Adaptation de la scrollbar en Dark Mode */
+@media (prefers-color-scheme: dark) {
+  ::-webkit-scrollbar-thumb {
+    background: rgba(107, 114, 128, 0.4);
+  }
+  ::-webkit-scrollbar-thumb:hover {
+    background: rgba(107, 114, 128, 0.7);
+  }
 }
 </style>
