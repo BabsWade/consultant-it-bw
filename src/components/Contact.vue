@@ -24,7 +24,7 @@ const personalInfo = {
 
 <template>
   <!-- Fond doux et épuré typique de One UI -->
-  <section id="contact" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
+  <section id="formation" class="py-24 bg-[#F2F2F7] dark:bg-[#000000] relative font-sans transition-colors duration-300">
     
     <!-- En-tête de section style One UI -->
     <div class="max-w-7xl mx-auto px-6 mb-12">
