@@ -15,18 +15,18 @@ import gestionEtablissementImage from "../assets/hero.png";
 
 export const personalInfo = {
   name: "Babacar WADE",
-  title: "Concepteur & Développeur Web/Mobile | Consultant CMS & LMS",
+  title: "Concepteur & Développeur d'Applications Web & Mobile Full Stack",
   location: "Thiès, Sénégal",
   email: "wadebabacar52@gmail.com",
   phone: "(+221) 77 868 79 66",
   website: "https://babacarwade.online",
-  github: "https://github.com/",
-  linkedin: "https://linkedin.com/",
+  github: "https://github.com/BabsWade",
+  linkedin: "https://linkedin.com/babacar-wade",
   bio: "Passionné par l'ingénierie logicielle et la transformation digitale, j'accompagne les institutions, universités et entreprises dans la conception d'architectures web robustes, l'intégration de systèmes complexes (CMS/LMS) et la gestion de plateformes à fort impact.",
   stats: [
-    { label: "Années d'expérience", value: "4+" },
-    { label: "Plateformes gérées", value: "10+" },
-    { label: "Diplôme", value: "Master Full-Stack" }
+    { label: "Expérience", value: "4+" },
+    { label: "Projets", value: "10+" },
+    { label: "Diplôme", value: "Master 2" }
   ]
 };
 
