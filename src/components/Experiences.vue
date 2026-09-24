@@ -15,7 +15,7 @@ import {
 <template>
   <section
     id="experiences"
-    class="relative overflow-hidden bg-white dark:bg-[#000000] py-16 md:py-24 transition-colors duration-300"
+    class="relative overflow-hidden dark:bg-[#000000] py-16 md:py-24 transition-colors duration-300"
   >
   
     <!-- Flou d'arrière-plan décoratif -->

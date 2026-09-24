@@ -37,7 +37,7 @@ const toolsConfig = {
 </script>
 
 <template>
-  <section id="competences" class="py-20 bg-white dark:bg-[#000000] relative px-4 sm:px-6 lg:px-8 transition-colors duration-300">
+  <section id="competences" class="py-20 dark:bg-[#000000] relative px-4 sm:px-6 lg:px-8 transition-colors duration-300">
     <div class="max-w-6xl mx-auto">
       
       <!-- En-tête de section One UI -->
