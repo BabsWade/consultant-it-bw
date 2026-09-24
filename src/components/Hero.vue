@@ -10,7 +10,7 @@ import { personalInfo } from '../data/portfolioData.js';
 
       <!-- Carte Principale -->
       <div
-        class="bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-xl border border-slate-200/70 dark:border-white/[0.08] rounded-[32px] p-8 sm:p-10 shadow-sm dark:shadow-black/30 transition-all duration-300 hover:shadow-md dark:hover:border-white/[0.12]"
+        class="bg-white/90 dark:bg-[#1C1C1E] backdrop-blur-xl border border-slate-200/70 dark:border-white/[0.08] rounded-[32px] p-8 sm:p-10 shadow-sm dark:shadow-black/30 transition-all duration-300 hover:shadow-md dark:hover:border-white/[0.12]"
       >
 
         <!-- En-tête -->
