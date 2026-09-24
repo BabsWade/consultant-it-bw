@@ -10,7 +10,7 @@ import { personalInfo } from '../data/portfolioData.js';
 
       <!-- Carte Principale -->
       <div
-        class="bg-white/90 dark:bg-[#1C1C1E] backdrop-blur-xl border border-slate-200/70 rounded-[32px] p-8 sm:p-10 shadow-sm dark:shadow-black/30 transition-all duration-300 hover:shadow-md dark:hover:border-white/[0.12]"
+        class="bg-white/90 dark:bg-[#1C1C1E] backdrop-blur-xl     rounded-[32px] p-8 sm:p-10 shadow-sm dark:shadow-black/30 transition-all duration-300 hover:shadow-md"
       >
 
         <!-- En-tête -->
@@ -18,7 +18,7 @@ import { personalInfo } from '../data/portfolioData.js';
 
           <!-- Localisation -->
           <div
-            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100/80 dark:bg-white/[0.06] border border-slate-200/60 dark:border-white/[0.08] text-xs font-semibold text-slate-600 dark:text-slate-300"
+            class="inline-flex items-center gap-2 px-4 py-1.5 rounded-full bg-slate-100/80 dark:bg-white/[0.06]       text-xs font-semibold text-slate-600 dark:text-slate-300"
           >
             <span class="relative flex h-2.5 w-2.5">
               <span
@@ -37,7 +37,7 @@ import { personalInfo } from '../data/portfolioData.js';
             :href="personalInfo.website"
             target="_blank"
             rel="noopener noreferrer"
-            class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/[0.10] hover:bg-blue-100 dark:hover:bg-blue-500/[0.18] border border-blue-100 dark:border-blue-500/20 px-3.5 py-1.5 rounded-full transition-colors"
+            class="inline-flex items-center gap-1.5 text-xs font-semibold text-blue-600 dark:text-blue-400 bg-blue-50 dark:bg-blue-500/[0.10] hover:bg-blue-100 dark:hover:bg-blue-500/[0.18] px-3.5 py-1.5 rounded-full transition-colors"
           >
             <span>babacarwade.online</span>
 
@@ -82,7 +82,7 @@ import { personalInfo } from '../data/portfolioData.js';
 
         <!-- Boutons -->
         <div
-          class="flex flex-wrap items-center gap-3 pt-8 border-t border-slate-100 dark:border-white/[0.08] mt-8"
+          class="flex flex-wrap items-center gap-3 pt-8       mt-8"
         >
 
           <!-- Email -->
@@ -110,7 +110,7 @@ import { personalInfo } from '../data/portfolioData.js';
           <!-- Téléphone -->
           <a
             :href="`tel:${personalInfo.phone.replace(/[^0-9+]/g, '')}`"
-            class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-slate-100 hover:bg-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.10] active:scale-[0.97] text-slate-700 dark:text-slate-200 font-medium text-sm transition-all gap-2 border border-transparent dark:border-white/[0.06]"
+            class="inline-flex items-center justify-center px-5 py-3 rounded-full bg-slate-100 hover:bg-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.10] active:scale-[0.97] text-slate-700 dark:text-slate-200 font-medium text-sm transition-all gap-2       "
           >
             <svg
               class="w-4 h-4 text-slate-500 dark:text-slate-400"
@@ -137,7 +137,7 @@ import { personalInfo } from '../data/portfolioData.js';
               :href="personalInfo.github"
               target="_blank"
               aria-label="GitHub"
-              class="inline-flex items-center justify-center p-3 rounded-full bg-slate-100 hover:bg-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.11] active:scale-[0.97] text-slate-700 dark:text-slate-200 transition-all border border-transparent dark:border-white/[0.06]"
+              class="inline-flex items-center justify-center p-3 rounded-full bg-slate-100 hover:bg-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.11] active:scale-[0.97] text-slate-700 dark:text-slate-200 transition-all       "
             >
               <svg
                 class="w-4 h-4"
@@ -157,7 +157,7 @@ import { personalInfo } from '../data/portfolioData.js';
               :href="personalInfo.linkedin"
               target="_blank"
               aria-label="LinkedIn"
-              class="inline-flex items-center justify-center p-3 rounded-full bg-slate-100 hover:bg-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.11] active:scale-[0.97] text-slate-700 dark:text-slate-200 transition-all border border-transparent dark:border-white/[0.06]"
+              class="inline-flex items-center justify-center p-3 rounded-full bg-slate-100 hover:bg-slate-200/80 dark:bg-white/[0.06] dark:hover:bg-white/[0.11] active:scale-[0.97] text-slate-700 dark:text-slate-200 transition-all       "
             >
               <svg
                 class="w-4 h-4"
@@ -180,7 +180,7 @@ import { personalInfo } from '../data/portfolioData.js';
         <div
           v-for="(stat, index) in personalInfo.stats"
           :key="index"
-          class="bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-xl border border-slate-200/70 dark:border-white/[0.08] rounded-[28px] p-6 shadow-sm dark:shadow-black/30 hover:shadow-md dark:hover:border-white/[0.12] transition-all duration-200 group"
+          class="bg-white/90 dark:bg-[#0a0a0a]/90 backdrop-blur-xl       rounded-[28px] p-6 shadow-sm dark:shadow-black/30 hover:shadow-md transition-all duration-200 group"
         >
           <span
             class="text-3xl sm:text-4xl font-extrabold text-slate-900 dark:text-white block tracking-tight group-hover:text-blue-600 dark:group-hover:text-blue-400 transition-colors"
