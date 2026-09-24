@@ -1,5 +1,5 @@
 <script setup>
-import { skills, tools } from '../data/portfolioData.js'; // Import de 'tools' ajouté
+import { skills } from '../data/portfolioData.js'; // Import de 'tools' ajouté
 import { 
   Code2, 
   Server, 
